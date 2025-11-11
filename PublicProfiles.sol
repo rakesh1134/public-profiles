@@ -2,16 +2,16 @@
 pragma solidity ^0.8;
 contract PublicProfiles 
 {
-    mapping(address => string) public data;
+    mapping(address => string) public profiles;
 
-    function adddata(string calldata d) public 
+    function addprofile(string calldata profile) public 
     {
-        data[msg.sender] = d;
+        profiles[msg.sender] = profile;
     }
 
-    function getdata() view public returns(string memory) 
+    function getprofile() view public returns(string memory) 
     {
-        return data[msg.sender];
+        return profiles[msg.sender];
     }
 
 }
