@@ -9,9 +9,14 @@ contract PublicProfiles
         profiles[msg.sender] = profile;
     }
 
-    function getprofile() view public returns(string memory) 
+    function getmyprofile() view public returns(string memory) 
     {
         return profiles[msg.sender];
+    }
+	
+	function getprofile(address u) view public returns(string memory) 
+    {
+        return profiles[u];
     }
 
 }
