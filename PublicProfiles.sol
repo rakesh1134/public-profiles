@@ -14,8 +14,9 @@ contract PublicProfiles
         return profiles[msg.sender];
     }
 	
-	function getprofile(address u) view public returns(string memory) 
+	function getprofile(address u) public payable returns(string memory) 
     {
+		require(msg.value == 1000 wei,"This call requires 1000 wei");
         return profiles[u];
     }
 
